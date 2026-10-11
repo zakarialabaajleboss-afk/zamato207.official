@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAMATO207 | Roblox</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080a12;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #ffffff15;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    color: #8b5cf6;
+    letter-spacing: 2px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        radial-gradient(ellipse at top, #5126a855, transparent 60%),
+        #080a12;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    border: 3px solid #8b5cf6;
+    box-shadow: 0 0 45px #8b5cf655;
+    margin-bottom: 25px;
+    object-fit: cover;
+}
+
+.tag {
+    color: #a78bfa;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(40px, 8vw, 75px);
+    margin: 15px 0;
+    font-weight: 900;
+}
+
+h1 span {
+    color: #a78bfa;
+}
+
+.description {
+    max-width: 550px;
+    color: #a1a1aa;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #8b5cf6;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px #8b5cf655;
+    background: #7c3aed;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111421;
+    border: 1px solid #ffffff12;
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #8b5cf6;
+}
+
+.card h3 {
+    color: #a78bfa;
+    margin-bottom: 15px;
+}
+
+.stat {
+    font-size: 35px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.muted {
+    color: #a1a1aa;
+    line-height: 1.6;
+}
+
+.edit-area {
+    display: grid;
+    gap: 12px;
+    max-width: 450px;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border-radius: 9px;
+    border: 1px solid #303448;
+    background: #111421;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #71717a;
+    border-top: 1px solid #ffffff15;
+}
+
+.fade {
+    animation: appear 1s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    header a {
+        margin-left: 8px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ZAMATO<span>207</span></div>
+    <nav>
+        <a href="#profil">Profil</a>
+        <a href="#stats">Stats</a>
+        <a href="#admin">Personnaliser</a>
+    </nav>
+</header>
+
+<main>
+    <div class="hero fade" id="profil">
+        <img
+            class="avatar"
+            src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=420&height=420&format=png"
+            alt="Avatar Roblox"
+            onerror="this.style.display='none'"
+        >
+
+        <p class="tag">ROBLOX PLAYER PROFILE</p>
+        <h1>HEY, I'M <span>ZAMATO207</span></h1>
+
+        <p class="description" id="bio">
+            Bienvenue sur mon espace gaming.
+            Découvre mon profil, mes statistiques et mon univers Roblox.
+        </p>
+
+        <a
+            class="button"
+            href="https://www.roblox.com/search/users?keyword=zamato207"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            VISITER MON PROFIL ROBLOX ↗
+        </a>
+    </div>
+
+    <section id="stats">
+        <h2 class="section-title">Mes statistiques</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>🎮 Jeux préférés</h3>
+                <div class="stat" id="games">Roblox</div>
+                <p class="muted">Mon univers de jeu</p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Niveau</h3>
+                <div class="stat" id="level">99</div>
+                <p class="muted">Niveau personnalisable</p>
+            </div>
+
+            <div class="card">
+                <h3>🏆 Statut</h3>
+                <div class="stat" id="status">PRO</div>
+                <p class="muted">Gaming mode activé</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="card">
+            <h3>Bienvenue dans mon monde.</h3>
+            <p class="muted" id="about">
+                Ici, tu retrouves mon profil de joueur,
+                mes objectifs et mes jeux préférés.
+                Merci de visiter mon site !
+            </p>
+        </div>
+    </section>
+
+    <section id="admin">
+        <h2 class="section-title">Personnaliser le site</h2>
+        <p class="muted">
+            Modifie les informations ci-dessous puis clique sur
+            « Appliquer les changements ».
+        </p>
+
+        <div class="edit-area">
+            <input id="newBio" placeholder="Ta description">
+            <input id="newLevel" placeholder="Ton niveau">
+            <input id="newStatus" placeholder="Ton statut">
+            <input id="newAbout" placeholder="À propos de toi">
+
+            <button class="button" onclick="updateSite()">
+                Appliquer les changements
+            </button>
+        </div>
+        <p class="muted" style="margin-top:15px">
+            Les changements sont visibles sur cette page uniquement.
+            Pour les conserver après fermeture, modifie le code HTML.
+        </p>
+    </section>
+</main>
+
+<footer>
+    © 2026 ZAMATO207 — ROBLOX GAMING PROFILE
+</footer>
+
+<script>
+function updateSite() {
+    const bio = document.getElementById("newBio").value;
+    const level = document.getElementById("newLevel").value;
+    const status = document.getElementById("newStatus").value;
+    const about = document.getElementById("newAbout").value;
+
+    if (bio.trim()) {
+        document.getElementById("bio").textContent = bio;
+    }
+
+    if (level.trim()) {
+        document.getElementById("level").textContent = level;
+    }
+
+    if (status.trim()) {
+        document.getElementById("status").textContent = status;
+    }
+
+    if (about.trim()) {
+        document.getElementById("about").textContent = about;
+    }
+}
+</script>
+
+</body>
+</html>
